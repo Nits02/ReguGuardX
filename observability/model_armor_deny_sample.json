@@ -1,0 +1,9 @@
+{
+  "control": "model_armor",
+  "action": "DENY",
+  "severity": "WARNING",
+  "message": "DENY tool call: Model Armor flagged the payload",
+  "tool": "get_transaction",
+  "reason": "Model Armor flagged the payload",
+  "source": "phase6_evidence"
+}

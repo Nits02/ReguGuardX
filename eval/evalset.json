@@ -1,0 +1,111 @@
+{
+  "eval_set_id": "reguguard_core",
+  "name": "ReguGuard core AML eval",
+  "eval_cases": [
+    {
+      "txn_id": "T-000000",
+      "label": "clean",
+      "expected_disposition": "clear",
+      "expected_rule": "",
+      "query": "Audit transaction T-000000 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000001",
+      "label": "clean",
+      "expected_disposition": "clear",
+      "expected_rule": "",
+      "query": "Audit transaction T-000001 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000002",
+      "label": "clean",
+      "expected_disposition": "clear",
+      "expected_rule": "",
+      "query": "Audit transaction T-000002 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000400",
+      "label": "sanctions_hit",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-SAN-03",
+      "query": "Audit transaction T-000400 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000401",
+      "label": "sanctions_hit",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-SAN-03",
+      "query": "Audit transaction T-000401 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000402",
+      "label": "sanctions_hit",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-SAN-03",
+      "query": "Audit transaction T-000402 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000415",
+      "label": "pep_counterparty",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-PEP-04",
+      "query": "Audit transaction T-000415 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000416",
+      "label": "pep_counterparty",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-PEP-04",
+      "query": "Audit transaction T-000416 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000417",
+      "label": "pep_counterparty",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-PEP-04",
+      "query": "Audit transaction T-000417 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000425",
+      "label": "structuring",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-STR-02",
+      "query": "Audit transaction T-000425 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000426",
+      "label": "structuring",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-STR-02",
+      "query": "Audit transaction T-000426 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000427",
+      "label": "structuring",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-STR-02",
+      "query": "Audit transaction T-000427 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000460",
+      "label": "velocity_anomaly",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-VEL-05",
+      "query": "Audit transaction T-000460 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000461",
+      "label": "velocity_anomaly",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-VEL-05",
+      "query": "Audit transaction T-000461 and return its disposition with rule citations."
+    },
+    {
+      "txn_id": "T-000462",
+      "label": "velocity_anomaly",
+      "expected_disposition": "escalate",
+      "expected_rule": "AML-VEL-05",
+      "query": "Audit transaction T-000462 and return its disposition with rule citations."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# Secrets & local env
+.env
+.env.*
+!.env.example
+**/.env
+!**/.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+**/build/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ADK / Agent Engine local artifacts
+**/.adk/
+agents/.ae_wheels/
+**/*.whl
+agents/**/*_tmp*/
+
+# Terraform local state & providers (do not publish)
+infra/terraform/.terraform/
+infra/terraform/*.tfstate
+infra/terraform/*.tfstate.*
+infra/terraform/tfplan
+infra/terraform/*.tfvars
+!infra/terraform/*.tfvars.example
+
+# OS / IDE
+.DS_Store
+**/.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs
+*.log

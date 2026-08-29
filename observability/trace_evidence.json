@@ -1,0 +1,24 @@
+{
+  "console_url": "https://console.cloud.google.com/traces/list?project=hl2-gcpp-ccoe-ge-h-regugu-1745",
+  "agent_engine_playground": "https://console.cloud.google.com/vertex-ai/agents/agent-engines/locations/us-central1/agent-engines/6351383343673638912/playground?project=hl2-gcpp-ccoe-ge-h-regugu-1745",
+  "sample_trace": {
+    "trace_id": "00325d7e97261ef567fb64ce23eed98a",
+    "span_count": 1,
+    "spans": [
+      {
+        "name": "/mcp",
+        "start": "2026-08-29 05:23:15.590350+00:00",
+        "end": "2026-08-29 05:23:15.622192+00:00"
+      }
+    ]
+  },
+  "traces_with_spans_preview": [
+    {
+      "trace_id": "00325d7e97261ef567fb64ce23eed98a",
+      "span_count": 1,
+      "span_names": [
+        "/mcp"
+      ]
+    }
+  ]
+}

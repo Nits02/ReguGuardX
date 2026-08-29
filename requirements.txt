@@ -1,0 +1,15 @@
+# Top-level dev/runtime deps (agents + tooling).
+# Pin loosely for the hackathon; tighten before production.
+google-adk>=2.0,<3
+# vertexai is provided by google-cloud-aiplatform (do not pin a separate vertexai==1.71.x)
+google-cloud-aiplatform[adk,agent_engines]>=1.125.0
+google-cloud-bigquery>=3.20.0
+google-cloud-modelarmor>=0.1.0
+google-cloud-trace>=1.13.0
+google-cloud-logging>=3.10.0
+fastmcp>=2.0.0
+mcp>=1.24,<2
+pandas>=2.2.0
+faker>=25.0.0
+python-dotenv>=1.0.0
+pytest>=8.0.0
