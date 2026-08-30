@@ -17,10 +17,11 @@
 
 <p align="center">
   <a href="#-problem-statement">Problem</a> ·
+  <a href="#-team">Team</a> ·
   <a href="#-proposed-solution">Solution</a> ·
   <a href="#-system-architecture">Architecture</a> ·
   <a href="#-hackathon-rubric-mapping">Rubric</a> ·
-  <a href="#-google-cloud-resources--native-stack">GCP Stack</a> ·
+  <a href="#-how-to-run--trigger-reguguardx">Run Agent</a> ·
   <a href="#-demo-day-golden-path-7-minutes">Demo</a> ·
   <a href="#-quickstart">Quickstart</a> ·
   <a href="#-evaluation--reliability-proof">Eval</a>
@@ -54,17 +55,18 @@ This repo is intentionally **self-contained for judges**: architecture, demo scr
 8. [Google Cloud Resources & Native Stack](#-google-cloud-resources--native-stack)
 9. [Technical Implementation](#-technical-implementation)
 10. [Repository Layout](#-repository-layout)
-11. [Demo-Day Golden Path](#-demo-day-golden-path-7-minutes)
-12. [Quickstart](#-quickstart)
-13. [Phased Delivery & Test Gates](#-phased-delivery--test-gates)
-14. [Evaluation & Reliability Proof](#-evaluation--reliability-proof)
-15. [Security Denials (live demo)](#-security-denials-live-demo)
-16. [Human-in-the-Loop](#-human-in-the-loop)
-17. [A2A Extensibility & Distillation Roadmap](#-a2a-extensibility--distillation-roadmap)
-18. [Observability](#-observability)
-19. [Definition of Done](#-definition-of-done)
-20. [Troubleshooting](#-troubleshooting)
-21. [How to Contribute](#-how-to-contribute)
+11. [How to Run / Trigger ReguGuardX](#-how-to-run--trigger-reguguardx)
+12. [Demo-Day Golden Path](#-demo-day-golden-path-7-minutes)
+13. [Quickstart](#-quickstart)
+14. [Phased Delivery & Test Gates](#-phased-delivery--test-gates)
+15. [Evaluation & Reliability Proof](#-evaluation--reliability-proof)
+16. [Security Denials (live demo)](#-security-denials-live-demo)
+17. [Human-in-the-Loop](#-human-in-the-loop)
+18. [A2A Extensibility & Distillation Roadmap](#-a2a-extensibility--distillation-roadmap)
+19. [Observability](#-observability)
+20. [Definition of Done](#-definition-of-done)
+21. [Troubleshooting](#-troubleshooting)
+22. [How to Contribute](#-how-to-contribute)
 
 ---
 
@@ -88,13 +90,20 @@ Financial institutions drown in AML alerts. Industry **false-positive rates comm
 
 ## 🌟 Team
 
-> Update names / links for your submission.
+<p align="center">
+  <img src="images/Team%20Photo.png" alt="ReguGuardX Team" width="520"/>
+  <br/>
+  <sub>ReguGuardX team — EPAM · Gemini Enterprise Hackathon (Stream 2)</sub>
+</p>
 
-| Role | Member |
-|------|--------|
-| Solution / Data Architect | _Your name_ |
-| Agent / ML Engineer | _Your name_ |
-| Cloud / Platform Engineer | _Your name_ |
+| Team member | Profile | Gemini Enterprise certification (Credly) |
+|-------------|---------|------------------------------------------|
+| **NiteshChand Sharma** | [OneHub profile](https://onehub.epam.com/telescope/profile?p=%2Fembedded%2Fpeople%2Fprofile%2F8760000000000636928%2Finformers) | [Certified Partner Specialist — Gemini Enterprise Deployment](https://www.credly.com/badges/296c47c4-738d-4dc5-b924-2c0a9500debd/public_url) |
+| **Rakesh Kumar 2** | [OneHub profile](https://onehub.epam.com/telescope/profile?p=%2Fembedded%2Fpeople%2Fprofile%2F8400000000016862454%2Finformers) | _Credly badge link — TBD_ |
+| **Raghavendra Banda** | [OneHub profile](https://onehub.epam.com/telescope/profile?p=%2Fembedded%2Fpeople%2Fprofile%2F8760000000013500250%2Finformers) | [Certified Partner Specialist — Gemini Enterprise Agent Development](https://www.credly.com/badges/d0fa0d94-1891-43f4-bba8-e3aade051d55/public_url) |
+| **Mihir Mohanty** | [OneHub profile](https://onehub.epam.com/telescope/profile?p=%2Fembedded%2Fpeople%2Fprofile%2F8760000000007533961%2Finformers) | _Credly badge link — TBD_ |
+
+> Team Certification (15%) is evidenced by the Credly public badge links above. Replace TBD placeholders as remaining badges are issued.
 
 ---
 
@@ -258,7 +267,7 @@ sequenceDiagram
 
 | Criterion (weight) | How ReguGuardX scores it | Evidence in this repo |
 |--------------------|--------------------------|------------------------|
-| **Team Certification (15%)** | Parallel platform certs from Phase 0 | Team section |
+| **Team Certification (15%)** | Gemini Enterprise Credly badges for the team | [Team](#-team) (Credly public URLs) |
 | **Certification & Security (30%)** | Private MCP IAM, Model Armor DENY, Cloud Trace | [Security denials](#-security-denials-live-demo), [Observability](#-observability) |
 | **Customer Use-Case (25%)** | AML triage ROI, EPAM FS / Agentic KYC adjacency | [Problem](#-problem-statement), [Demo](#-demo-day-golden-path-7-minutes) |
 | **Architecture & Extensibility (15%)** | ADK swarm + MCP decoupling + A2A boundary story | [Architecture](#-system-architecture), [A2A](#-a2a-extensibility--distillation-roadmap) |
@@ -282,7 +291,7 @@ sequenceDiagram
 | **GCS** | `<project>-reguguard-staging` | Agent Engine packaging |
 | **Vertex RAG corpus** | `…/ragCorpora/<id>` | Policy grounding |
 | **Model Armor template** | `…/templates/reguguard-shield` | PI / jailbreak / URI / SDP filters |
-| **Vertex AI Agent Engine** | `ReguGuard-AML-Swarm` (`reasoningEngines/<id>`) | Sessions, Memory Bank, OTEL |
+| **Vertex AI Agent Engine** | `ReguGuardX-AML-Swarm` (`reasoningEngines/<id>`) | Sessions, Memory Bank, OTEL |
 | **APIs** | AI Platform, Cloud Run, BigQuery, Model Armor, Trace, Logging, Storage, RAG | Enabled via Terraform / gcloud |
 
 IAM highlights:
@@ -334,10 +343,16 @@ IAM highlights:
 ```text
 ReguGuardX/
 ├── ReguGuardX.png                 # Brand logo
-├── images/                        # Architecture visuals
+├── images/                        # Team photo + architecture visuals
 ├── README.md                      # ← you are here (single source for judges)
+├── docs/                          # Detailed runbook / demo / SAD (moved off root)
+│   ├── ReguGuard_RUNBOOK.md
+│   ├── ReguGuard_DEMO_SCRIPT.md
+│   ├── ReguGuard_Solution_Architecture.md
+│   ├── RUNBOOK.md
+│   └── DEMO_SCRIPT.md
 ├── agents/
-│   ├── reguguard/                 # ADK package (root_agent + tools + security)
+│   ├── reguguard/                 # ADK package for ReguGuardX (root_agent + tools)
 │   └── deploy_agent_engine.py
 ├── mcp_servers/                   # Transaction + Sanctions FastMCP apps
 ├── data/                          # Synthetic generator, BQ loader, policies/
@@ -346,6 +361,92 @@ ReguGuardX/
 ├── scripts/                       # 00→08 provision / deploy / HITL / gates
 ├── observability/                 # Trace + Model Armor evidence pack
 └── .env.example                   # Configuration template
+```
+
+---
+
+## ▶️ How to Run / Trigger ReguGuardX
+
+Use these paths after `.env` is filled and MCP / RAG / Model Armor are available (local or Cloud Run).
+
+### Option A — ADK Web UI (fastest local demo)
+
+```bash
+cd ReguGuardX
+source .venv/bin/activate
+set -a && source .env && set +a
+export GOOGLE_GENAI_USE_VERTEXAI=true
+
+# Terminal 1 (only if using localhost MCP URLs)
+make mcp-local
+# or: bash scripts/run_mcp_local.sh
+
+# Terminal 2
+adk web agents
+```
+
+1. Open the ADK UI (typically `http://127.0.0.1:8000`)
+2. Select the **`reguguard`** app (ReguGuardX root agent package)
+3. Trigger an audit with natural language, for example:
+   - Clean: `Audit transaction T-000000 and return its disposition with rule citations.`
+   - Sanctions / HITL: `Audit transaction T-000400 end-to-end for AML/sanctions risk.`
+   - Injection (Model Armor): see [`eval/attack_cases.md`](eval/attack_cases.md)
+
+### Option B — CLI one-shot (`adk run`)
+
+```bash
+source .venv/bin/activate && set -a && source .env && set +a
+export GOOGLE_GENAI_USE_VERTEXAI=true
+adk run agents/reguguard
+# then type the audit prompt interactively
+```
+
+### Option C — HITL pause / resume script
+
+```bash
+python scripts/07_hitl_demo.py
+# Uses HITL_TXN_ID (default T-000400): pauses on request_human_approval, then resumes with approval
+```
+
+### Option D — Vertex AI Agent Engine (managed)
+
+```bash
+# Deploy / update
+adk deploy agent_engine \
+  --project="$GOOGLE_CLOUD_PROJECT" \
+  --region="$GOOGLE_CLOUD_LOCATION" \
+  --display_name="ReguGuardX-AML-Swarm" \
+  --otel_to_cloud \
+  agents/reguguard
+
+# Trigger from playground (console) or Python SDK:
+# Console → Vertex AI → Agent Engines → ReguGuardX-AML-Swarm → Playground
+```
+
+```python
+import asyncio, os
+from vertexai import agent_engines
+
+eng = agent_engines.get(os.environ["AGENT_ENGINE_RESOURCE"])
+
+async def audit(txn_id: str):
+    sess = await eng.async_create_session(user_id="demo")
+    sid = sess["id"] if isinstance(sess, dict) else sess.id
+    async for event in eng.async_stream_query(
+        user_id="demo",
+        session_id=sid,
+        message=f"Audit transaction {txn_id} and return disposition with citations.",
+    ):
+        print(event)
+
+asyncio.run(audit("T-000000"))
+```
+
+### Option E — Cross-phase smoke + eval
+
+```bash
+bash scripts/08_phase_gates.sh
+python -u eval/test_reguguard.py
 ```
 
 ---
@@ -394,14 +495,18 @@ gcloud auth application-default login --scopes=https://www.googleapis.com/auth/c
 python data/generate_data.py
 # apply infra/terraform OR scripts for APIs / SAs / BQ load — see Phased Delivery
 
-# 5) Local MCP + ADK UI
+# 5) Local MCP + ReguGuardX ADK UI
 make mcp-local          # another shell
-adk web agents          # open UI, select reguguard
+adk web agents          # open UI, select the reguguard app (ReguGuardX)
 
 # 6) Gates / eval
 bash scripts/08_phase_gates.sh
 python -u eval/test_reguguard.py
 ```
+
+Full trigger options (UI / CLI / HITL / Agent Engine): [How to Run / Trigger ReguGuardX](#-how-to-run--trigger-reguguardx).
+
+Detailed build steps: [`docs/ReguGuard_RUNBOOK.md`](docs/ReguGuard_RUNBOOK.md) · Demo beats: [`docs/ReguGuard_DEMO_SCRIPT.md`](docs/ReguGuard_DEMO_SCRIPT.md) · SAD: [`docs/ReguGuard_Solution_Architecture.md`](docs/ReguGuard_Solution_Architecture.md).
 
 ---
 
@@ -434,7 +539,7 @@ Agent Engine (preferred):
 adk deploy agent_engine \
   --project="$GOOGLE_CLOUD_PROJECT" \
   --region="$GOOGLE_CLOUD_LOCATION" \
-  --display_name="ReguGuard-AML-Swarm" \
+  --display_name="ReguGuardX-AML-Swarm" \
   --otel_to_cloud \
   agents/reguguard
 ```
@@ -590,10 +695,13 @@ Suggested Monitoring tiles: audits processed · avg tool latency · Model Armor 
 
 ---
 
-## 📎 Appendix — Policy & attack references
+## 📎 Appendix — Policy, docs & attack references
 
 | Doc | Purpose |
 |-----|---------|
+| [`docs/ReguGuard_Solution_Architecture.md`](docs/ReguGuard_Solution_Architecture.md) | Full SAD & phased plan for ReguGuardX |
+| [`docs/ReguGuard_RUNBOOK.md`](docs/ReguGuard_RUNBOOK.md) | End-to-end provision → deploy → demo |
+| [`docs/ReguGuard_DEMO_SCRIPT.md`](docs/ReguGuard_DEMO_SCRIPT.md) | 7-minute golden path |
 | [`data/policies/*.md`](data/policies/) | RAG grounding corpus |
 | [`eval/attack_cases.md`](eval/attack_cases.md) | Security demo scripts |
 | [`observability/dashboard_notes.md`](observability/dashboard_notes.md) | Trace / log tiles |
