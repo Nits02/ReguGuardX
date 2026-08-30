@@ -18,12 +18,12 @@
 <p align="center">
   <a href="#-problem-statement">Problem</a> ·
   <a href="#-team">Team</a> ·
+  <a href="#-why-reguguardx-wins">Why We Win</a> ·
   <a href="#-proposed-solution">Solution</a> ·
   <a href="#-system-architecture">Architecture</a> ·
   <a href="#-hackathon-rubric-mapping">Rubric</a> ·
   <a href="#-how-to-run--trigger-reguguardx">Run Agent</a> ·
-  <a href="#-demo-day-golden-path-7-minutes">Demo</a> ·
-  <a href="#-quickstart">Quickstart</a> ·
+  <a href="#-if-we-had-more-time">Roadmap+</a> ·
   <a href="#-evaluation--reliability-proof">Eval</a>
 </p>
 
@@ -47,26 +47,28 @@ This repo is intentionally **self-contained for judges**: architecture, demo scr
 
 1. [Problem Statement](#-problem-statement)
 2. [Team](#-team)
-3. [Proposed Solution](#-proposed-solution)
-4. [Capabilities Delivered (Phases 0–6)](#-capabilities-delivered-phases-0–6)
-5. [Challenges & Impact](#-challenges--impact)
-6. [System Architecture](#-system-architecture)
-7. [Hackathon Rubric Mapping](#-hackathon-rubric-mapping)
-8. [Google Cloud Resources & Native Stack](#-google-cloud-resources--native-stack)
-9. [Technical Implementation](#-technical-implementation)
-10. [Repository Layout](#-repository-layout)
-11. [How to Run / Trigger ReguGuardX](#-how-to-run--trigger-reguguardx)
-12. [Demo-Day Golden Path](#-demo-day-golden-path-7-minutes)
-13. [Quickstart](#-quickstart)
-14. [Phased Delivery & Test Gates](#-phased-delivery--test-gates)
-15. [Evaluation & Reliability Proof](#-evaluation--reliability-proof)
-16. [Security Denials (live demo)](#-security-denials-live-demo)
-17. [Human-in-the-Loop](#-human-in-the-loop)
-18. [A2A Extensibility & Distillation Roadmap](#-a2a-extensibility--distillation-roadmap)
-19. [Observability](#-observability)
-20. [Definition of Done](#-definition-of-done)
-21. [Troubleshooting](#-troubleshooting)
-22. [How to Contribute](#-how-to-contribute)
+3. [Why ReguGuardX Wins](#-why-reguguardx-wins)
+4. [Proposed Solution](#-proposed-solution)
+5. [Capabilities Delivered (Phases 0–6)](#-capabilities-delivered-phases-0–6)
+6. [Challenges & Impact](#-challenges--impact)
+7. [System Architecture](#-system-architecture)
+8. [Hackathon Rubric Mapping](#-hackathon-rubric-mapping)
+9. [Google Cloud Resources & Native Stack](#-google-cloud-resources--native-stack)
+10. [Technical Implementation](#-technical-implementation)
+11. [Repository Layout](#-repository-layout)
+12. [How to Run / Trigger ReguGuardX](#-how-to-run--trigger-reguguardx)
+13. [Demo-Day Golden Path](#-demo-day-golden-path-7-minutes)
+14. [Quickstart](#-quickstart)
+15. [Phased Delivery & Test Gates](#-phased-delivery--test-gates)
+16. [Evaluation & Reliability Proof](#-evaluation--reliability-proof)
+17. [Security Denials (live demo)](#-security-denials-live-demo)
+18. [Human-in-the-Loop](#-human-in-the-loop)
+19. [A2A Extensibility & Distillation Roadmap](#-a2a-extensibility--distillation-roadmap)
+20. [If We Had More Time](#-if-we-had-more-time)
+21. [Observability](#-observability)
+22. [Definition of Done](#-definition-of-done)
+23. [Troubleshooting](#-troubleshooting)
+24. [How to Contribute](#-how-to-contribute)
 
 ---
 
@@ -99,11 +101,64 @@ Financial institutions drown in AML alerts. Industry **false-positive rates comm
 | Team member | Profile | Gemini Enterprise certification (Credly) |
 |-------------|---------|------------------------------------------|
 | **NiteshChand Sharma** | [OneHub profile](https://onehub.epam.com/telescope/profile?p=%2Fembedded%2Fpeople%2Fprofile%2F8760000000000636928%2Finformers) | [Certified Partner Specialist — Gemini Enterprise Deployment](https://www.credly.com/badges/296c47c4-738d-4dc5-b924-2c0a9500debd/public_url) |
-| **Rakesh Kumar 2** | [OneHub profile](https://onehub.epam.com/telescope/profile?p=%2Fembedded%2Fpeople%2Fprofile%2F8400000000016862454%2Finformers) | _Credly badge link — TBD_ |
+| **Rakesh Kumar 2** | [OneHub profile](https://onehub.epam.com/telescope/profile?p=%2Fembedded%2Fpeople%2Fprofile%2F8400000000016862454%2Finformers) | [Certified Partner Specialist — Gemini Enterprise Deployment](https://www.credly.com/badges/c4cc1d2c-fce2-446b-94bd-44274a53075d/public_url) |
 | **Raghavendra Banda** | [OneHub profile](https://onehub.epam.com/telescope/profile?p=%2Fembedded%2Fpeople%2Fprofile%2F8760000000013500250%2Finformers) | [Certified Partner Specialist — Gemini Enterprise Agent Development](https://www.credly.com/badges/d0fa0d94-1891-43f4-bba8-e3aade051d55/public_url) |
-| **Mihir Mohanty** | [OneHub profile](https://onehub.epam.com/telescope/profile?p=%2Fembedded%2Fpeople%2Fprofile%2F8760000000007533961%2Finformers) | _Credly badge link — TBD_ |
 
-> Team Certification (15%) is evidenced by the Credly public badge links above. Replace TBD placeholders as remaining badges are issued.
+> Team Certification (15%) is evidenced by the Credly public badge links above for every listed member.
+
+---
+
+## 🏅 Why ReguGuardX Wins
+
+<p align="center">
+  <em>Not another demo chatbot — a governed, measurable compliance swarm that enterprises can actually ship.</em>
+</p>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+
+### ① Innovation that compounds
+We didn’t stop at “an LLM that reads alerts.” ReguGuardX is a **full ADK swarm** wired to **private MCP**, **Vertex RAG citations**, **Model Armor**, and **HITL pause/resume** — five hard problems solved in one vertical slice on Google’s agent platform.
+
+    </td>
+    <td width="50%" valign="top">
+
+### ② Game-changer for the AML grind
+Industry false-positive rates of **90–95%** burn analyst hours while true sanctions hits still need audit-ready paper trails. We flip the model: agents propose **rule-cited dispositions** in minutes; humans only interrupt on **critical risk** — never auto-clear a sanctions hit.
+
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+
+### ③ Built for industry-wide reuse
+Banks, payment processors, fintechs, crypto compliance — same pattern: **governed tools + policy RAG + interruptible decisions**. Swap the MCP servers and policy corpus; keep the orchestration, identity, and eval harness. An **EPAM marketplace accelerator**, not a one-off lab toy.
+
+    </td>
+    <td width="50%" valign="top">
+
+### ④ Trust you can measure
+Judges and risk committees don’t buy vibes. We ship a live **precision / recall matrix**, **Cloud Trace** of every delegation, and **dual live denials** (IAM 403 + Model Armor DENY). Reliability is a scorecard, not a slide claim.
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
+
+### ⑤ Enterprise-grade governance by default
+Every tool call must survive **agent identity → Cloud Run IAM → Model Armor** before it touches data. Critical cases **pause for a human officer** and resume deterministically. That is the difference between a hackathon wow and something a CISO / AML officer would let near production.
+
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img alt="governed" src="https://img.shields.io/badge/Governed-MCP%20%2B%20IAM%20%2B%20Model%20Armor-0F9D58?style=for-the-badge"/>
+  <img alt="cited" src="https://img.shields.io/badge/Audit--ready-RAG%20rule%20citations-4285F4?style=for-the-badge"/>
+  <img alt="hitl" src="https://img.shields.io/badge/HITL-never%20auto--clear%20sanctions-DB4437?style=for-the-badge"/>
+  <img alt="eval" src="https://img.shields.io/badge/Proven-precision%20%2F%20recall-F4B400?style=for-the-badge"/>
+</p>
 
 ---
 
@@ -647,6 +702,64 @@ Successful reasoning traces
 ```
 
 Frame as long-term **EPAM marketplace accelerator** ROI.
+
+---
+
+## ⏳ If We Had More Time
+
+With another sprint (or a client engagement), we would push ReguGuardX from **hackathon vertical slice** to **production-shaped product**. Top five enhancements:
+
+<table>
+  <tr>
+    <td width="8%" align="center"><strong>01</strong></td>
+    <td>
+
+**Real-time alert ingress, not chat-only triggers**  
+Wire transaction-monitoring systems via **Pub/Sub / Eventarc** so every TMS alert opens an Agent Engine session automatically — dispositions flow back into case-management without an analyst pasting a txn ID.
+
+    </td>
+  </tr>
+  <tr>
+    <td width="8%" align="center"><strong>02</strong></td>
+    <td>
+
+**Agent Gateway + enterprise identity**  
+Front the swarm with **Agent Gateway / Identity** so banks can SSO, rate-limit, and audit who invoked which tool under which mandate — the missing bridge from lab SA tokens to regulated access patterns.
+
+    </td>
+  </tr>
+  <tr>
+    <td width="8%" align="center"><strong>03</strong></td>
+    <td>
+
+**First-class A2A sanctions & cross-institution mesh**  
+Promote Sanctions Screening to a standalone **A2A Agent Card** (and optionally peer with peer-bank / consortium screeners). External orchestrators compose ReguGuardX without forking our ADK tree — true platform interoperability.
+
+    </td>
+  </tr>
+  <tr>
+    <td width="8%" align="center"><strong>04</strong></td>
+    <td>
+
+**Cost-at-scale distillation**  
+Turn successful reasoning traces into a **PEFT / LoRA Flash–Gemma student** for routine clears; keep Gemini Pro + HITL only on high-risk / novel patterns. Same quality story, dramatically lower $/alert at bank volumes.
+
+    </td>
+  </tr>
+  <tr>
+    <td width="8%" align="center"><strong>05</strong></td>
+    <td>
+
+**Multi-jurisdiction policy packs + continuous eval CI**  
+Ship swappable RAG packs (OFAC / EU / UN / FATF national overlays) and gate every merge with the **precision/recall harness** in CI — so policy updates cannot silently regress recall before they hit production.
+
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <sub>Bonus backlog: officer-facing HITL console · explainability heatmaps on citations · synthetic adversarial red-team corpus refreshed monthly.</sub>
+</p>
 
 ---
 
