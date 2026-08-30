@@ -105,6 +105,23 @@ Financial institutions drown in AML alerts. Industry **false-positive rates comm
 
 > Team Certification (15%) is evidenced by the Credly public badge links above for every listed member.
 
+### Demo video & pitch deck
+
+<table>
+<tr>
+<td width="50%" align="center" valign="top">
+<strong>Demo video</strong><br/>
+<a href="images/Regu-GuardX.mp4"><img src="images/team-photo.png" alt="Play ReguGuardX demo video" width="360"/></a><br/>
+<a href="images/Regu-GuardX.mp4"><strong>Play demo video (MP4)</strong></a>
+</td>
+<td width="50%" align="center" valign="top">
+<strong>Pitch deck</strong><br/>
+<a href="images/ReguGuardX_Pitch.pptx"><img src="ReguGuardX.png" alt="Open ReguGuardX pitch deck" width="200"/></a><br/>
+<a href="images/ReguGuardX_Pitch.pptx"><strong>Open pitch deck (PPTX)</strong></a>
+</td>
+</tr>
+</table>
+
 ---
 
 ## 🏅 Why ReguGuardX Wins
@@ -381,7 +398,7 @@ IAM highlights:
 ```text
 ReguGuardX/
 ├── ReguGuardX.png                 # Brand logo
-├── images/                        # team-photo.png + architecture visuals
+├── images/                        # team-photo, architecture, demo MP4, pitch PPTX
 ├── README.md                      # ← you are here (single source for judges)
 ├── docs/                          # Detailed runbook / demo / SAD (moved off root)
 │   ├── ReguGuard_RUNBOOK.md
